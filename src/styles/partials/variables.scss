@@ -1,0 +1,73 @@
+// Colours
+
+$black: #000000;
+
+$crochet-corner-dark-purple: #BE73E9;
+$crochet-corner-purple: #D283FF;
+$crochet-corner-light-purple: #C9AFFF;
+
+$crochet-corner-dark-blue: #77B6FB; 
+$crochet-corner-blue: #A4CEFC;
+$crochet-corner-light-blue: #CCE4FD;
+
+$crochet-corner-dark-green: #7ACC7A;
+$crochet-corner-green: #98D998;
+$crochet-corner-light-green: #B8E6B8;
+
+$crochet-corner-dark-yellow: #FFE260;
+$crochet-corner-yellow: #FFE985;
+$crochet-corner-light-yellow: #FFF0AD;
+
+$crochet-corner-dark-orange: #FFA86B;
+$crochet-corner-orange: #FFCC84;
+$crochet-corner-light-orange: #FFE1A8;
+
+// Breakpoints
+$tablet-breakpoint: 48rem;
+$desktop-breakpoint: 80rem;
+
+// Fonts
+
+    // Mobile Fonts
+    
+        // Page Header
+        $mobile-pagehead-font-size: 1.75rem;
+        $mobile-pagehead-line-height: 2.25rem;
+
+        // Subheader
+        $mobile-subhead-font-size: 1.25rem;
+        $mobile-subhead-line-height: 1.75rem;
+
+        // Button
+        $mobile-button-font-size: 1.125rem;
+        $mobile-button-line-height: 1.625rem;
+
+        // Body Large
+        $mobile-body-large-font-size: .9375rem;
+        $mobile-body-large-line-height: 1.5rem;
+
+        // Body Small
+        $mobile-body-small-font-size: .8125rem;
+        $mobile-body-small-line-height: 1.25rem;
+
+    // Tablet/Desktop Fonts
+    
+        // Page Header
+        $tablet-desktop-pagehead-font-size: 2rem;
+        $tablet-desktop-pagehead-line-height: 2.5rem;
+
+        // Subheader
+        $tablet-desktop-subhead-font-size: 1.5rem;
+        $tablet-desktop-subhead-line-height: 2rem;
+
+        // Button
+        $tablet-desktop-button-font-size: 1.25rem;
+        $tablet-desktop-button-line-height: 1.75rem;
+
+        // Body Large
+        $tablet-desktop-body-large-font-size: 1rem;
+        $tablet-desktop-body-large-line-height: 1.5rem;
+
+        // Body Small
+        $tablet-desktop-body-small-font-size: .875rem;
+        $tablet-desktop-body-small-line-height: 1.25rem;

@@ -1,0 +1,53 @@
+@use './mixins.scss' as *;
+@use './variables.scss' as *;
+
+*,
+*::before,
+*::after {   
+    box-sizing: border-box; 
+}  
+
+body {
+    margin: 0;
+    font-family: 'Fresca', sans-serif;
+}
+
+Link, a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+    @include mobile-page-body-large;
+
+    @include tablet {
+        @include tablet-desktop-page-body-large;
+    }
+}
+
+button {
+    margin: 0;
+    @include mobile-page-button;
+    
+    @include tablet {
+        @include tablet-desktop-page-button;
+    }
+}
+
+h1 {
+    margin: 0;
+    @include mobile-page-header;
+
+    @include tablet {
+        @include tablet-desktop-page-header;
+    }
+}
+
+h2, h3 {
+    margin: 0;
+    @include mobile-page-subheader;
+
+    @include tablet {
+        @include tablet-desktop-page-subheader;
+    }
+}
