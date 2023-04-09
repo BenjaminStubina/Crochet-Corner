@@ -1,0 +1,44 @@
+@use '../../styles/partials/mixins.scss' as *;
+@use '../../styles/partials/variables.scss' as *;
+@use '../../styles/partials/resets.scss' as *;
+
+.button {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: none;
+
+    &--US {
+        background-color: $crochet-corner-light-blue;
+
+        &:hover {
+            background-color: $crochet-corner-blue;
+        }
+    }
+
+    &--UK {
+        background-color: $crochet-corner-light-orange;
+
+        &:hover {
+            background-color: $crochet-corner-orange
+        }
+    }
+
+    &--favourite {
+        background-color: $crochet-corner-light-orange;
+
+        &:hover {
+            background-color: $crochet-corner-orange
+        }
+    }
+
+    &__text {
+        @include mobile-page-button;
+    }
+
+    &__icon {
+        height: 50px;
+    }
+}

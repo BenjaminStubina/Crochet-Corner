@@ -15,30 +15,35 @@
 
 // Mobile Font Mixins
 @mixin mobile-page-header {
+    font-family: 'Fresca', sans-serif;
     font-size: $mobile-pagehead-font-size;
     line-height: $mobile-pagehead-line-height;
     color: $black;
 }
 
 @mixin mobile-page-subheader {
+    font-family: 'Fresca', sans-serif;
     font-size: $mobile-subhead-font-size;
     line-height: $mobile-subhead-line-height;
     color: $black;
 }
 
 @mixin mobile-page-button {
+    font-family: 'Fresca', sans-serif;
     font-size: $mobile-button-font-size;
     line-height: $mobile-button-line-height;
     color: $black;
 }
 
 @mixin mobile-page-body-large {
+    font-family: 'Fresca', sans-serif;
     font-size: $mobile-body-large-font-size;
     line-height: $mobile-body-large-line-height;
     color: $black;
 }
 
 @mixin mobile-page-body-small {
+    font-family: 'Fresca', sans-serif;
     font-size: $mobile-body-small-font-size;
     line-height: $mobile-body-small-line-height;
     color: $black;
@@ -46,30 +51,35 @@
 
 // Tablet/Desktop Font Mixins
 @mixin tablet-desktop-page-header {
+    font-family: 'Fresca', sans-serif;
     font-size: $tablet-desktop-pagehead-font-size;
     line-height: $tablet-desktop-pagehead-line-height;
     color: $black;
 }
 
 @mixin tablet-desktop-page-subheader {
+    font-family: 'Fresca', sans-serif;
     font-size: $tablet-desktop-subhead-font-size;
     line-height: $tablet-desktop-subhead-line-height;
     color: $black;
 }
 
 @mixin tablet-desktop-page-button {
+    font-family: 'Fresca', sans-serif;
     font-size: $tablet-desktop-button-font-size;
     line-height: $tablet-desktop-button-line-height;
     color: $black;
 }
 
 @mixin tablet-desktop-page-body-large {
+    font-family: 'Fresca', sans-serif;
     font-size: $tablet-desktop-body-large-font-size;
     line-height: $tablet-desktop-body-large-line-height;
     color: $black;
 }
 
 @mixin tablet-desktop-page-body-small {
+    font-family: 'Fresca', sans-serif;
     font-size: $tablet-desktop-body-small-font-size;
     line-height: $tablet-desktop-body-small-line-height;
     color: $black;
