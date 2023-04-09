@@ -1,11 +1,12 @@
 import './Header.scss'
 import logo1 from '../../assets/icons/yarn-hook.png'
 import logo2 from '../../assets/icons/crochet-hook-2.png'
+import { Link } from 'react-router-dom'
 
 function Header( {color} ) {
 
     function headerStyle() {
-        if (color === 'homepage') {
+        if (color === 'Home') {
             return 'header header--homepage'
         }
         else if (color === 'US') {
@@ -20,13 +21,17 @@ function Header( {color} ) {
     }
 
     return (
-        <div className={headerStyle(color)}>
-            <img className='header__logo' src={logo1} alt='Crochet Corner Logo' />
-            <h1 className='header__title'>
-                Crochet Corner
-            </h1>
-            <img className='header__logo' src={logo2} alt='Crochet Corner Logo' />
-        </div>
+        <section className={headerStyle(color)}>
+            <Link to='/'>
+                <div className='header__container'>
+                    <img className='header__logo' src={logo1} alt='Crochet Corner Logo' />
+                    <h1 className='header__title'>
+                        Crochet Corner
+                    </h1>
+                    <img className='header__logo' src={logo2} alt='Crochet Corner Logo' />
+                </div>
+            </Link>
+        </section>
     )
 }
 

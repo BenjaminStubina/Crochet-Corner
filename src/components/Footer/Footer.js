@@ -6,7 +6,7 @@ import github from '../../assets/icons/github-sign.png';
 function Footer({ color }) {
 
     function footerStyle() {
-        if (color === 'homepage') {
+        if (color === 'Home') {
             return 'footer footer--homepage'
         }
         else if (color === 'US') {

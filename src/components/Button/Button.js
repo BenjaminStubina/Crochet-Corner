@@ -2,6 +2,7 @@ import './Button.scss';
 import FlagUS from '../../assets/icons/united-states.png';
 import FlagUK from '../../assets/icons/united-kingdom.png';
 import Favourite from '../../assets/icons/red-heart.png';
+import Home from '../../assets/icons/home.png'
 
 function Button({ styling, text }) {
     
@@ -11,6 +12,9 @@ function Button({ styling, text }) {
         }
         else if (styling === 'UK') {
             return 'button button--UK';
+        }
+        else if (styling === 'Home') {
+            return 'button button--home';
         }
         else {
             return 'button button--favourite';
@@ -23,6 +27,9 @@ function Button({ styling, text }) {
         }
         else if (styling === 'UK') {
             return FlagUK;
+        }
+        else if (styling === 'Home') {
+            return Home;
         }
         else {
             return Favourite;

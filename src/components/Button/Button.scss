@@ -4,7 +4,7 @@
 
 .button {
     display: flex;
-    width: 100%;
+    width: 20rem;
     height: 3rem;
     justify-content: space-between;
     align-items: center;
@@ -22,10 +22,10 @@
     }
 
     &--UK {
-        background-color: $crochet-corner-light-orange;
+        background-color: $crochet-corner-light-purple;
 
         &:hover {
-            background-color: $crochet-corner-orange;
+            background-color: $crochet-corner-purple;
         }
     }
 
@@ -34,6 +34,14 @@
 
         &:hover {
             background-color: $crochet-corner-green;
+        }
+    }
+
+    &--home {
+        background-color: $crochet-corner-light-yellow;
+
+        &:hover {
+            background-color: $crochet-corner-yellow;
         }
     }
 
