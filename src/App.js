@@ -1,14 +1,13 @@
 import './App.css';
 import Header from './components/Header/Header';
 import Button from './components/Button/Button';
+import Homepage from './pages/Homepage/Homepage';
 
 function App() {
   return (
     <>
       <Header />
-      <Button styling='US' text='US Stitches' />
-      <Button styling='UK' text='UK Stitches' />
-      <Button styling='Favourite' text='Favourite Stitches' />
+      <Homepage />
     </>
   );
 }
