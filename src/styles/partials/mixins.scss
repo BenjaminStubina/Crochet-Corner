@@ -19,6 +19,7 @@
     font-size: $mobile-pagehead-font-size;
     line-height: $mobile-pagehead-line-height;
     color: $black;
+    font-weight: bold;
 }
 
 @mixin mobile-page-subheader {
@@ -26,6 +27,7 @@
     font-size: $mobile-subhead-font-size;
     line-height: $mobile-subhead-line-height;
     color: $black;
+    font-weight: bold;
 }
 
 @mixin mobile-page-button {
@@ -33,6 +35,7 @@
     font-size: $mobile-button-font-size;
     line-height: $mobile-button-line-height;
     color: $black;
+    font-weight: bold;
 }
 
 @mixin mobile-page-body-large {
@@ -40,6 +43,7 @@
     font-size: $mobile-body-large-font-size;
     line-height: $mobile-body-large-line-height;
     color: $black;
+    font-weight: bold;
 }
 
 @mixin mobile-page-body-small {
@@ -47,6 +51,7 @@
     font-size: $mobile-body-small-font-size;
     line-height: $mobile-body-small-line-height;
     color: $black;
+    font-weight: bold;
 }
 
 // Tablet/Desktop Font Mixins
