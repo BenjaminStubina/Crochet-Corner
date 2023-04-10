@@ -58,11 +58,11 @@ function Stitch({ stitch, country }) {
     return (
         <article className={colorChecker(country)}>
             <div className='stitch__container'>
-                <img className='stitch__symbol' src={stitch.symbol} alt='stitch symbol' />
-                <p className='stitch__text'>
+                <img className='stitch__symbol' src={stitch.diagram} alt='stitch symbol' />
+                <p className='stitch__text-name'>
                     {stitchName(stitch)}
                 </p>
-                <p className='stitch__text'>
+                <p className='stitch__text-code'>
                     {stitchCode(stitch)}
                 </p>
                 <img onClick={handleClick} className='stitch__heart' src={favouriteChecker()} alt='heart icon' />

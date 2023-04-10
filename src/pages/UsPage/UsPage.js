@@ -5,7 +5,7 @@ import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import StitchList from '../../components/StitchList/StitchList';
 
-function UsPage() {
+function UsPage({ stitches }) {
     return (
         <>
             <Header color='US' />
@@ -13,7 +13,7 @@ function UsPage() {
                 <Link to='/'>
                     <Button styling='Home' text='Homepage' />
                 </Link>
-                {/* <StitchList /> */}
+                <StitchList country='US' stitches={stitches} />
             </section>
             <Footer color='US' />
         </>

@@ -24,7 +24,7 @@ function StitchList({ stitches, country }) {
     }
 
     return (
-        <section className='stich-list'>
+        <section className='stitch-list'>
             {stitches.map((stitch) => {
                 return (
                     <Stitch 

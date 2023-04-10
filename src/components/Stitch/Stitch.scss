@@ -7,7 +7,7 @@
     width: 20rem;
     height: 3rem;
     border: none;
-    padding: 0 3rem;
+    padding: 0 1rem;
     border-radius: 7px;
     box-shadow: .125rem .125rem .25rem rgba(0, 0, 0, 0.3);
 
@@ -37,19 +37,29 @@
 
     &__container {
         display: flex;
-        // justify-content: space-around;
-        gap: 2rem;
+        align-items: center;
+        justify-content: center;
     }
 
     &__symbol {
         height: 2.5rem;
+        width: 2.5rem;
     }
 
-    &__text {
-        @include mobile-page-button;
+    &__text-name {
+        @include mobile-page-body-small;
+        width: 9.5rem;
+        padding-left: 1.75rem;
+    }
+
+    &__text-code {
+        @include mobile-page-body-small;
+        width: 4rem;
+        padding-left: 0.75rem;
     }
 
     &__heart {
-        height: 2.5rem;
+        height: 2rem;
+        width: 2rem;
     }
 }
