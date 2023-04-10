@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from './pages/Homepage/Homepage';
 import UsPage from './pages/UsPage/UsPage';
+import UkPage from './pages/UkPage/UkPage';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -29,6 +30,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Homepage />} />
         <Route path='/US' element={<UsPage stitches={stitches} />} />
+        <Route path='/UK' element={<UkPage stitches={stitches} />} />
       </Routes>
     </BrowserRouter>
   );
