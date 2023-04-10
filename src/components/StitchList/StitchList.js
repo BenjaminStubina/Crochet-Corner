@@ -15,8 +15,11 @@ function StitchList({ stitches, country }) {
         if (country === 'US') {
             return 'US';
         }
-        else {
+        else if (country === 'UK') {
             return 'UK';
+        }
+        else {
+            return 'favourite';
         }
     }
 

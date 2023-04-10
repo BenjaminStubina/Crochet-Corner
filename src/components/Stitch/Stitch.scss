@@ -1,0 +1,55 @@
+@use '../../styles/partials/mixins.scss' as *;
+@use '../../styles/partials/variables.scss' as *;
+@use '../../styles/partials/resets.scss' as *;
+
+.stitch {
+    display: flex;
+    width: 20rem;
+    height: 3rem;
+    border: none;
+    padding: 0 3rem;
+    border-radius: 7px;
+    box-shadow: .125rem .125rem .25rem rgba(0, 0, 0, 0.3);
+
+    &--US {
+        background-color: $crochet-corner-light-blue;
+
+        &:hover {
+            background-color: $crochet-corner-blue;
+        }
+    }
+
+    &--UK {
+        background-color: $crochet-corner-light-purple;
+
+        &:hover {
+            background-color: $crochet-corner-purple;
+        }
+    }
+
+    &--favourite {
+        background-color: $crochet-corner-light-green;
+
+        &:hover {
+            background-color: $crochet-corner-green;
+        }
+    }
+
+    &__container {
+        display: flex;
+        // justify-content: space-around;
+        gap: 2rem;
+    }
+
+    &__symbol {
+        height: 2.5rem;
+    }
+
+    &__text {
+        @include mobile-page-button;
+    }
+
+    &__heart {
+        height: 2.5rem;
+    }
+}
