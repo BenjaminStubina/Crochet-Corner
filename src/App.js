@@ -3,12 +3,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from './pages/Homepage/Homepage';
 import UsPage from './pages/UsPage/UsPage';
 import UkPage from './pages/UkPage/UkPage';
+import StitchPage from './pages/StitchPage/StitchPage';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 function App() {
 
   const [stitches, setStitches] = useState();
+  const [selectedStitch, setSelectedStitch] = useState();
 
   useEffect(() => {
     async function fetchData() {
@@ -29,8 +31,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Homepage />} />
-        <Route path='/US' element={<UsPage stitches={stitches} />} />
-        <Route path='/UK' element={<UkPage stitches={stitches} />} />
+        <Route path='/US' element={<UsPage stitches={stitches} setSelectedStitch={setSelectedStitch} />} />
+        <Route path='/UK' element={<UkPage stitches={stitches} setSelectedStitch={setSelectedStitch} />} />
+        <Route path='/:id' element={<StitchPage stitch={selectedStitch}/>} />
       </Routes>
     </BrowserRouter>
   );

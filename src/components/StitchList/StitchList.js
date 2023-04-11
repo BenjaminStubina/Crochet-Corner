@@ -1,7 +1,7 @@
 import './StitchList.scss';
 import Stitch from '../Stitch/Stitch';
 
-function StitchList({ stitches, country }) {
+function StitchList({ stitches, country, setSelectedStitch }) {
 
     if (!stitches) {
         return (
@@ -30,6 +30,7 @@ function StitchList({ stitches, country }) {
                     <Stitch 
                     stitch={stitch}
                     country={countryChecker(country)}
+                    setSelectedStitch={setSelectedStitch}
                     />
                 )
             })}

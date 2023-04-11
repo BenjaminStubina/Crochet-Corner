@@ -18,6 +18,9 @@ function Footer({ color }) {
         else if (color === 'favourite') {
             return 'footer footer--favourite'
         }
+        else {
+            return 'footer footer--stitch'
+        }
     }
 
     return (

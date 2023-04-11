@@ -2,6 +2,12 @@
 @use '../../styles/partials/variables.scss' as *;
 @use '../../styles/partials/resets.scss' as *;
 
+Link, a {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
 .stitch {
     display: flex;
     width: 20rem;

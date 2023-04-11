@@ -2,8 +2,14 @@ import './Stitch.scss';
 import redHeart from '../../assets/icons/red-heart.png';
 import noHeart from '../../assets/icons/empty-heart.png';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-function Stitch({ stitch, country }) {
+function Stitch({ stitch, country, setSelectedStitch }) {
+
+    function clickHandler() {
+        setSelectedStitch(stitch)
+        console.log(stitch)
+    }
 
     const [favourite, setFavourite] = useState(false);
     
@@ -55,16 +61,20 @@ function Stitch({ stitch, country }) {
         }
     }
 
+    const id = stitch.id
+
     return (
         <article className={colorChecker(country)}>
             <div className='stitch__container'>
-                <img className='stitch__symbol' src={stitch.diagram} alt='stitch symbol' />
-                <p className='stitch__text-name'>
-                    {stitchName(stitch)}
-                </p>
-                <p className='stitch__text-code'>
-                    {stitchCode(stitch)}
-                </p>
+                <Link onClick={clickHandler} to={`/${id}`}>
+                    <img className='stitch__symbol' src={stitch.diagram} alt='stitch symbol' />
+                    <p className='stitch__text-name'>
+                        {stitchName(stitch)}
+                    </p>
+                    <p className='stitch__text-code'>
+                        {stitchCode(stitch)}
+                    </p>
+                </Link>
                 <img onClick={handleClick} className='stitch__heart' src={favouriteChecker()} alt='heart icon' />
             </div>
         </article>
