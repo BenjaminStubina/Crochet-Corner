@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Crochet Corner
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Crochet Corner is a hub for any chrocheter of any skill level. In this app, users can browse through a variety of crochet stitches in both their US and UK names/notations. Users can favourite stitches to add them to their favourited page. Each stitch can be selected to navigate to a detailed page containing more information about the stitch and an embed guide.
 
-## Available Scripts
+## TechStack Used
 
-In the project directory, you can run:
+React Fron-tend with Axios calls to the Back-end
+SASS for Front-end styling
+React Router Dom used for dynamic Front-end navigation
+Node with Express Back-end using self-made API
+CORS resource sharing
+DotEnv used for hiding port information
 
-### `npm start`
+## Instalation Procedures
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Git Clone the Front-end and Back-end Repos
+Create a .env file for Back-end with port=8080
+Install dependencies for Front-end
+Install dependencies for Back-end
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Lessons Learned and Next Steps
 
-### `npm test`
+Throughout this capstone project I learned a lot about the development process when starting a project from scratch. Throughout the semester, many of the projects assigned to me had plenty of resources allocated such as style guides, mockups, and other resources which helped shape the direction of the work. In the case of this capstone everything from the idea, to the functionality, and even the styling was entirely up to me. As a result, through trial and attempts, I learned that the features which I had maticulously planned out ahead of time were much easier to code and get working compared to the features that had to be added dynamically as other issues arose. There is a very clear and defined bridge between planning the back-end and the front-end and the more thoughfully they are kept in mind when planning, the more seemlessly they will merge together when the project is brought to life.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Some functionality im very happy with in this project was the dynamic and re-useability of components such as Button, Header, Footer, Lists, and Stitch in which they change based on the page on which they are rendered, and their respective functionality. Another feature that im proud of is a quick-fix to an issue I had with persisting state for a selected stitch. When navigated on a selected stitch's dynamic page, if the page was refreshed the useState that determines what stitch was selected would not persist but the URL would resulting in a 404 error. To fix this I had the useState update based on a dependency of the dynamic URL changing. As a result, even if the page is refreshed, the URL is automatically used to update the useState to have the page re-render with the proper information again.
 
-### `npm run build`
+Proud of / Challenge hybrid: A feature that I am both proud of and if I had another change at refactoring I would definitely do so is my JSON data. I am proud of myself for managing to keep my JSON data to a single array of objects (this includes the favourited stitches). Rather than have a seperate JSON object for the favourited stitches I came up with the idea to simply use patch requests to update the selected stitches with an attribute of "favourite" to either "true/false". This turned out to be an interesting experiment and although I believe for code quality and eligibilty it would be better to just use a seperate object for any favourite stitches, I managed to make it work just fine!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Some challenges that I faced throughout this project were managing state through children/grandchildren and performing axios calls in non-optimal places on the component hierarchy. I think this aspect of my project is where my code quality is not at its bessed and things could be refactored much more efficiently. As a result, there are many times where props and state are passed down multiple lines of components which can be hard to follow.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Next Steps for this project are to incorporate all of the data through a Database. Currently I am reading and writting the data to a JSON file because I was not able to get to the phase 2/3 goals which were DBs and User signup/login functionality. Realisitically I would like the app to have user signup/login functionality to access the favourites page but the app itself could still be accessed as a guest where all other functionality is still available. As well, I want to make the app responsive at tablet/desktop. Another small next step will be to include more navigation functionality such as backspace for reverse navigation across pages, etc. Finally I will look to deploy the app as well.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Screenshots
 
-### `npm run eject`
+![Homepage](/Assets/Screenshots/Homepage.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![StitchListUS](/Assets/Screenshots/Stitch%20List%20(US).png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![StitchPage](/Assets/Screenshots/Stitch%20Page.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![FavouritesPage](/Assets/Screenshots/Favourites%20Page.png)
