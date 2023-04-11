@@ -28,9 +28,10 @@ function StitchList({ stitches, country, setSelectedStitch }) {
             {stitches.map((stitch) => {
                 return (
                     <Stitch 
+                    key={stitch.id}
+                    setSelectedStitch={setSelectedStitch}
                     stitch={stitch}
                     country={countryChecker(country)}
-                    setSelectedStitch={setSelectedStitch}
                     />
                 )
             })}

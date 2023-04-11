@@ -6,7 +6,17 @@ import { Link } from 'react-router-dom';
 
 function StitchPage({ stitch }) {
 
-    console.log(stitch);
+    if (!stitch) {
+        return (
+            <>
+                <Header color='Stitch'/>
+                <h1>
+                    Loading...
+                </h1>
+                <Footer color='Stitch'/>
+            </>
+        )
+    }
 
     return (
         <>
@@ -42,7 +52,7 @@ function StitchPage({ stitch }) {
                 <iframe
                     className='stitch-container__video-player'
                     src={stitch.tutorial}
-                    frameborder="0"
+                    frameBorder="0"
                     title='Embedded Youtube'
                 />
             </section>

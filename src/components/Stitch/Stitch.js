@@ -6,13 +6,14 @@ import { Link } from 'react-router-dom';
 
 function Stitch({ stitch, country, setSelectedStitch }) {
 
-    function clickHandler() {
+    const [favourite, setFavourite] = useState(false);
+
+    let id = stitch.id
+
+    function handleSelect() {
         setSelectedStitch(stitch)
-        console.log(stitch)
     }
 
-    const [favourite, setFavourite] = useState(false);
-    
     function handleClick() {
         if (favourite === false) {
             setFavourite(true);
@@ -61,12 +62,10 @@ function Stitch({ stitch, country, setSelectedStitch }) {
         }
     }
 
-    const id = stitch.id
-
     return (
         <article className={colorChecker(country)}>
             <div className='stitch__container'>
-                <Link onClick={clickHandler} to={`/${id}`}>
+                <Link onClick={handleSelect} to={`/stitch/${id}`}>
                     <img className='stitch__symbol' src={stitch.diagram} alt='stitch symbol' />
                     <p className='stitch__text-name'>
                         {stitchName(stitch)}
