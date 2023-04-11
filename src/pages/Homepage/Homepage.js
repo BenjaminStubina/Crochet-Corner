@@ -21,10 +21,10 @@ function Homepage() {
                 <Link to='/US'>
                     <Button styling='US' text='US Stitches' />
                 </Link>
-                <Link to='UK'>
+                <Link to='/UK'>
                     <Button styling='UK' text='UK Stitches' />
                 </Link>
-                <Link to='favourites'>
+                <Link to='/favourites'>
                     <Button styling='Favourite' text='Favourite Stitches' />   
                 </Link>
             </div>

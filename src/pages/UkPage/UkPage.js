@@ -5,7 +5,7 @@ import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import StitchList from '../../components/StitchList/StitchList';
 
-function UkPage({ stitches, setSelectedStitch }) {
+function UkPage({ stitches, setSelectedStitch, setNeedUpdate }) {
     return (
         <>
             <Header color='UK' />
@@ -13,7 +13,7 @@ function UkPage({ stitches, setSelectedStitch }) {
                 <Link to='/'>
                     <Button styling='Home' text='Homepage' />
                 </Link>
-                <StitchList country='UK' stitches={stitches} setSelectedStitch={setSelectedStitch} />
+                <StitchList country='UK' stitches={stitches} setNeedUpdate={setNeedUpdate} setSelectedStitch={setSelectedStitch} />
             </section>
             <Footer color='UK' />
         </>

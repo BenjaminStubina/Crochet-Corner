@@ -1,0 +1,38 @@
+@use '../../styles/partials/mixins.scss' as *;
+@use '../../styles/partials/variables.scss' as *;
+@use '../../styles/partials/resets.scss' as *;
+
+.favourite {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $crochet-corner-green;
+    background-color: $crochet-corner-light-green;
+    border-radius: 7px;
+    width: 20rem;
+    align-items: center;
+    padding: 1rem 0;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    &__inner-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    &__symbol {
+        height: 4rem;
+    }
+
+    &__trash {
+        height: 3rem;
+        width: 3rem;
+    }
+}

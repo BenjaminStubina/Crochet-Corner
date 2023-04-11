@@ -1,12 +1,13 @@
 import './Stitch.scss';
 import redHeart from '../../assets/icons/red-heart.png';
 import noHeart from '../../assets/icons/empty-heart.png';
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { useState } from 'react';    
 
-function Stitch({ stitch, country, setSelectedStitch }) {
+function Stitch({ stitch, country, setSelectedStitch, setNeedUpdate }) {
 
-    const [favourite, setFavourite] = useState(false);
+    const [favourite, setFavourite] = useState(stitch.favourite);
 
     let id = stitch.id
 
@@ -15,16 +16,47 @@ function Stitch({ stitch, country, setSelectedStitch }) {
     }
 
     function handleClick() {
-        if (favourite === false) {
-            setFavourite(true);
+
+        if (stitch.favourite === 'false') {
+            async function updateFavourites() {
+                try {
+                    await axios.patch("http://localhost:8080/", 
+                    {
+                        id: id,
+                        favourite: "true",
+                    })
+                }
+                catch {
+                    console.log("Error updating favourites!")
+                }
+            }
+            updateFavourites()
+            setFavourite('true')
+            setNeedUpdate(Math.random())
+            favouriteChecker();
         }
         else {
-            setFavourite(false);
+            async function updateFavourites() {
+                try {
+                    await axios.patch("http://localhost:8080/", 
+                    {
+                        id: id,
+                        favourite: "false",
+                    })
+                }
+                catch {
+                    console.log("Error updating favourites!")
+                }
+            }
+            updateFavourites()
+            setFavourite('false')
+            setNeedUpdate(Math.random())
+            favouriteChecker();
         }
     }
 
     function favouriteChecker() {
-        if (favourite === false) {
+        if (favourite === 'false') {
             return noHeart;
         }
         else {

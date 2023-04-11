@@ -4,6 +4,7 @@ import Homepage from './pages/Homepage/Homepage';
 import UsPage from './pages/UsPage/UsPage';
 import UkPage from './pages/UkPage/UkPage';
 import StitchPage from './pages/StitchPage/StitchPage';
+import FavouritesPage from './pages/FavouritesPage/FavouritesPage';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -12,9 +13,9 @@ function App() {
   const path = window.location.pathname.split('/stitch/')
   const idInUrl = path?.length > 0  ? path[1] : ''
 
+  const [needUpdate, setNeedUpdate] = useState(0);
   const [stitches, setStitches] = useState();
   const [selectedStitch, setSelectedStitch] = useState();
-  const [favourites, setFavourites] = useState();
   
   useEffect(() => {
     if (stitches && idInUrl) {
@@ -34,29 +35,16 @@ function App() {
     }
 
     fetchData();
-  },[])
-
-  useEffect(() => {
-    async function fetchFavourites() {
-      try {
-        let {data} = await axios.get("http://localhost:8080/");
-        setFavourites(data);
-      }
-      catch {
-        console.log("Error 404")
-      }
-    }
-
-    fetchFavourites();
-  },[])
+  },[needUpdate])
 
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Homepage />} />
-        <Route path='/US' element={<UsPage stitches={stitches} setSelectedStitch={setSelectedStitch} />} />
-        <Route path='/UK' element={<UkPage stitches={stitches} setSelectedStitch={setSelectedStitch} />} />
-        <Route path='/stitch/:id' element={<StitchPage stitch={selectedStitch}/>} />
+        <Route path='/US' element={<UsPage stitches={stitches} setNeedUpdate={setNeedUpdate} setSelectedStitch={setSelectedStitch} />} />
+        <Route path='/UK' element={<UkPage stitches={stitches} setNeedUpdate={setNeedUpdate} setSelectedStitch={setSelectedStitch} />} />
+        <Route path='/stitch/:id' element={<StitchPage stitch={selectedStitch} />} />
+        <Route path='/favourites' element={<FavouritesPage setNeedUpdate={setNeedUpdate} setSelectedStitch={setSelectedStitch} />} />
       </Routes>
     </BrowserRouter>
   );
