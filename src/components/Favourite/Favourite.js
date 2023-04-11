@@ -11,6 +11,8 @@ function Favourite({ setRender, setNeedUpdate, setSelectedStitch, favouriteStitc
         setSelectedStitch(favouriteStitch)
     }
 
+    // Handle click function will run an axios patch to update the stitch JSON to change the favourited from true to false
+    // Function also updates state to re-render and refresh the axios calls on the above parents
     function handleClick() {
 
         async function updateFavourites() {

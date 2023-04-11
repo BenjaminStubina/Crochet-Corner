@@ -23,6 +23,7 @@ function StitchList({ stitches, country, setSelectedStitch, setNeedUpdate }) {
         }
     }
 
+    // Maps over all of the stitches with either US or UK information
     return (
         <section className='stitch-list'>
             {stitches.map((stitch) => {

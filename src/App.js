@@ -17,12 +17,14 @@ function App() {
   const [stitches, setStitches] = useState();
   const [selectedStitch, setSelectedStitch] = useState();
   
+  // Persists the selected stitch based on the selected stitch ID in the URL to prevent crashing on page refresh
   useEffect(() => {
     if (stitches && idInUrl) {
       setSelectedStitch(stitches.find(stich => stich.id === idInUrl))
     }
   },[stitches, idInUrl])
 
+  // fecting stitch list from JSON file
   useEffect(() => {
     async function fetchData() {
       try {

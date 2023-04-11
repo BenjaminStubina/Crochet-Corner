@@ -9,12 +9,16 @@ function Stitch({ stitch, country, setSelectedStitch, setNeedUpdate }) {
 
     const [favourite, setFavourite] = useState(stitch.favourite);
 
+    // setting id to the stitch id for dynamic rendering
     let id = stitch.id
 
+    // sets state to the selected stitch for the dynamic rendering of the stitch page
     function handleSelect() {
         setSelectedStitch(stitch)
     }
 
+    // on click function performs an axios patch to the JSON file to determine if the stitch is favourited or not
+    // it then updates the favourite status to the opposite of its current value and re-renders the axios calls to refresh the favourited lists
     function handleClick() {
 
         if (stitch.favourite === 'false') {
@@ -55,6 +59,7 @@ function Stitch({ stitch, country, setSelectedStitch, setNeedUpdate }) {
         }
     }
 
+    // checks to see if the heart icon should be displayed as full or empty
     function favouriteChecker() {
         if (favourite === 'false') {
             return noHeart;
@@ -64,6 +69,7 @@ function Stitch({ stitch, country, setSelectedStitch, setNeedUpdate }) {
         }
     }
 
+    // checks to see if the user is browsing the US or the UK pages
     function colorChecker() {
         if (country === 'US') {
             return 'stitch stitch--US';

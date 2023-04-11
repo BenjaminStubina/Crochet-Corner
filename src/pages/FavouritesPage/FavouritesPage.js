@@ -12,6 +12,8 @@ function FavouritesPage({ setNeedUpdate, setSelectedStitch }) {
     const [favouriteStitches, setFavouriteStitches] = useState()
     const [render, setRender] = useState();
 
+    // Axios call to fetch stitch list and filters for any stitches that are favourited
+    // Re-renders whenever a stitch is deleted from the favourites list
     useEffect(() => {
         async function fetchData() {
             try {
@@ -26,6 +28,7 @@ function FavouritesPage({ setNeedUpdate, setSelectedStitch }) {
         fetchData();
     },[render])
 
+    // If no items are favourited, or all favourited items are deleted. renders a special message
     if (!favouriteStitches || favouriteStitches.length === 0) {
         return (
             <>

@@ -1,6 +1,7 @@
 import './FavouriteList.scss';
 import Favourite from '../Favourite/Favourite';
 
+// Component maps over all of the favourited stitches
 function FavouriteList({ setRender, favouriteStitches, setSelectedStitch, setNeedUpdate }) {
     return (
         <section className='favourite-list'>
