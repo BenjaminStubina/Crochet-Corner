@@ -11,6 +11,12 @@
     width: 20rem;
     align-items: center;
     padding: 1rem 0;
+    box-shadow: .125rem .125rem .25rem rgba(0, 0, 0, 0.3);
+    position: relative;
+
+    &:hover {
+        background-color: $crochet-corner-green;
+    }
 
     &__container {
         display: flex;
@@ -27,12 +33,32 @@
         gap: 1rem;
     }
 
+    &__text-outer-container {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+    }
+
     &__symbol {
         height: 4rem;
     }
 
     &__trash {
-        height: 3rem;
-        width: 3rem;
+        height: 2.5rem;
+        width: 2.5rem;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        border-radius: 7px;
+
+        &:hover {
+            background-color: $crochet-corner-dark-green;
+            border: 3px solid $crochet-corner-dark-green;
+        }
     }
 }

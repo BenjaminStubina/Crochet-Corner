@@ -37,18 +37,24 @@ function Favourite({ setRender, setNeedUpdate, setSelectedStitch, favouriteStitc
             <div className='favourite__container'>
                 <Link className='favourite__inner-container' onClick={handleSelect} to={`/stitch/${id}`}>
                     <img className='favourite__symbol' src={favouriteStitch.diagram} alt='stitch symbol' />
-                    <p className='favourite__text-name'>
-                        US Name: {favouriteStitch.usName}
-                    </p>
-                    <p className='favourite__text-name'>
-                        UK Name: {favouriteStitch.ukName}
-                    </p>
-                    <p className='favourite__text-code'>
-                        US Code: {favouriteStitch.usCode}
-                    </p>
-                    <p className='favourite__text-code'>
-                        UK Code: {favouriteStitch.ukCode}
-                    </p>
+                    <div className='favourite__text-outer-container'>
+                        <div className='favourite__text-container'>
+                            <p className='favourite__text-name'>
+                                US Name: {favouriteStitch.usName}
+                            </p>
+                            <p className='favourite__text-name'>
+                                UK Name: {favouriteStitch.ukName}
+                            </p>
+                        </div>
+                        <div className='favourite__text-container'>
+                            <p className='favourite__text-code'>
+                                US Code: {favouriteStitch.usCode}
+                            </p>
+                            <p className='favourite__text-code'>
+                                UK Code: {favouriteStitch.ukCode}
+                            </p>
+                        </div>
+                    </div>
                 </Link>
                 <img onClick={handleClick} className='favourite__trash' src={trashIcon} alt='trash icon' />
             </div>
