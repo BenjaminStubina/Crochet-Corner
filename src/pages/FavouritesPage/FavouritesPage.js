@@ -37,7 +37,7 @@ function FavouritesPage({ setNeedUpdate, setSelectedStitch }) {
                     <Link to='/'>
                         <Button styling='Home' text='Homepage' />
                     </Link>
-                    <h1 className='favourite__title'>
+                    <h1 className='favourites__title'>
                         No stitches favourited yet!
                     </h1>
                 </section>

@@ -21,7 +21,7 @@
     align-items: center;
     gap: 1rem;
     margin: 0 1rem;
-    min-height: 19.8125rem;
+    min-height: 52.5vh;
 
     &__details-container {
         display: flex;
@@ -42,14 +42,17 @@
     }
 
     &__image-container {
-        width: 100%;
+        width: 20rem;
         aspect-ratio: 1/1;
         justify-content: center;
+        margin-top: 0.5rem;
     }
 
     &__image {
         width: 100%;
         height: 100%;
+        border-radius: 7px;
+        box-shadow: .125rem .125rem .25rem rgba(0, 0, 0, 0.3);
     }
 
     &__description {
@@ -58,7 +61,7 @@
     }
 
     &__video-player {
-        width: 100%;
+        width: 20rem;
         aspect-ratio: 16/9;
     }
 }
