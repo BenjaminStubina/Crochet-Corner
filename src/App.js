@@ -5,6 +5,7 @@ import UsPage from './pages/UsPage/UsPage';
 import UkPage from './pages/UkPage/UkPage';
 import StitchPage from './pages/StitchPage/StitchPage';
 import FavouritesPage from './pages/FavouritesPage/FavouritesPage';
+import ProjectsPage from './pages/ProjectsPage/ProjectsPage';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -47,6 +48,7 @@ function App() {
         <Route path='/UK' element={<UkPage stitches={stitches} setNeedUpdate={setNeedUpdate} setSelectedStitch={setSelectedStitch} />} />
         <Route path='/stitch/:id' element={<StitchPage stitch={selectedStitch} />} />
         <Route path='/favourites' element={<FavouritesPage setNeedUpdate={setNeedUpdate} setSelectedStitch={setSelectedStitch} />} />
+        <Route path='/projects' element={<ProjectsPage />} />
       </Routes>
     </BrowserRouter>
   );

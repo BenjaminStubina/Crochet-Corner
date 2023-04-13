@@ -45,6 +45,14 @@
         }
     }
 
+    &--projects {
+        background-color: $crochet-corner-light-red;
+
+        &:hover {
+            background-color: $crochet-corner-red;
+        }
+    }
+
     &__text {
         @include mobile-page-button;
     }

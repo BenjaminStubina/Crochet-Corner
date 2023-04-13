@@ -27,6 +27,9 @@ function Homepage() {
                 <Link to='/favourites'>
                     <Button styling='Favourite' text='Favourite Stitches' />   
                 </Link>
+                <Link to='/projects'>
+                    <Button styling='Projects' text='My Projects' />   
+                </Link>
             </div>
             <Footer color='Home' />
         </>

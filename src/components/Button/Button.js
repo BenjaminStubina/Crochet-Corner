@@ -3,6 +3,7 @@ import FlagUS from '../../assets/icons/united-states.png';
 import FlagUK from '../../assets/icons/united-kingdom.png';
 import Favourite from '../../assets/icons/red-heart.png';
 import Home from '../../assets/icons/home.png'
+import Project from '../../assets/icons/blueprint.png'
 
 // Button logic is checking to see what styling is passed down as a prop to determine the colour and the button icon
 
@@ -18,6 +19,9 @@ function Button({ styling, text }) {
         else if (styling === 'Home') {
             return 'button button--home';
         }
+        else if (styling === 'Projects') {
+            return 'button button--projects'
+        }
         else {
             return 'button button--favourite';
         }
@@ -32,6 +36,9 @@ function Button({ styling, text }) {
         }
         else if (styling === 'Home') {
             return Home;
+        }
+        else if (styling === 'Projects') {
+            return Project;
         }
         else {
             return Favourite;

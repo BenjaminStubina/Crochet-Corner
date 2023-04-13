@@ -18,6 +18,9 @@ function Header( {color} ) {
         else if (color === 'favourite') {
             return 'header header--favourite'
         }
+        else if (color === 'Projects') {
+            return 'header header--projects'
+        }
         else {
             return 'header header--stitch';
         }
