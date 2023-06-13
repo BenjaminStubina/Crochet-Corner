@@ -32,7 +32,7 @@ Next Steps for this project are to incorporate all of the data through a Databas
 
 ## Screenshots
 
-![Homepage](/Assets/Screenshots/Homepage.png)
+<img width="317" alt="Homepage" src="https://github.com/BenjaminStubina/Crochet-Corner/assets/123490049/7d034f41-823f-48c7-a0d2-fb0b4b0ae397">
 
 ![StitchListUS](/Assets/Screenshots/Stitch%20List%20(US).png)
 
