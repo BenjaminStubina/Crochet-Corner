@@ -4,7 +4,7 @@ Crochet Corner is a hub for any chrocheter of any skill level. In this app, user
 
 ## TechStack Used
 
-React Fron-tend with Axios calls to the Back-end
+React Front-tend with Axios calls to the Back-end
 SASS for Front-end styling
 React Router Dom used for dynamic Front-end navigation
 Node with Express Back-end using self-made API
