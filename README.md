@@ -34,8 +34,8 @@ Next Steps for this project are to incorporate all of the data through a Databas
 
 <img width="317" alt="Homepage" src="https://github.com/BenjaminStubina/Crochet-Corner/assets/123490049/7d034f41-823f-48c7-a0d2-fb0b4b0ae397">
 
-![StitchListUS](/Assets/Screenshots/Stitch%20List%20(US).png)
+<img width="318" alt="Stitch List (US)" src="https://github.com/BenjaminStubina/Crochet-Corner/assets/123490049/2d44b2b6-686f-4c20-be46-b935003a875c">
 
-![StitchPage](/Assets/Screenshots/Stitch%20Page.png)
+<img width="314" alt="Stitch Page" src="https://github.com/BenjaminStubina/Crochet-Corner/assets/123490049/8cc8e4f4-6b5a-42a0-bd8f-f09116af4972">
 
-![FavouritesPage](/Assets/Screenshots/Favourites%20Page.png)
+<img width="312" alt="Favourites Page" src="https://github.com/BenjaminStubina/Crochet-Corner/assets/123490049/acf22bc9-08a9-4a41-9ec0-5793efe6b421">
